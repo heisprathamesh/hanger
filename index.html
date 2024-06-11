@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanger</title> <style>
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+        ::-webkit-scrollbar{
+            width: 5px;
+            background-color:black;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: #000000;
+        }
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+            background-color: black;
+        }
+        .btns{
+            background-color:transparent;
+             color: #008f1f;
+     font-size: 17px;
+     padding: 10px 20px;
+     text-transform: uppercase;
+     font-weight: 700;
+     font-family:Arial, Helvetica, sans-serif;
+     border: none;
+     border: 1px solid #008f1f;
+     border-radius: 20px;
+     transition: all 0.5s;
+     /* box-shadow: 2px 2px 26px #0059ff44;  */
+     cursor:grabbing;    
+  }
+
+  .btns:focus{
+  /* box-shadow: 2px 2px 26px #0051ff7e;      */
+  
+  }
+  .btns:hover{
+  background-image: linear-gradient(-45deg, #a00000,#cc0000,#830000);
+  box-shadow: 2px 2px 4px #000000;
+  border: 1px solid #000000;
+  color: #000000;
+  transform: scale(1.1);
+
+  }
+  .btns::after{
+    content: "😇";
+    transition: all 0.5s ;
+
+  }
+  .btns:hover::after{
+    content: "😈";
+   
+
+  }
+  /* .btns:hover::before{
+    content: "Don't ";
+  } */
+
+  @media (max-width:767px) {
+    body{
+        height: 50vh;
+    }
+    
+  }
+  
+        
+    </style>
+</head>
+<body>
+  <div class="body">
+    <button class="btns" id="btn">Click Here</button>
+
+
+  </div>
+
+
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+
+           
+            // while(true){
+            //     console.log(1);
+            //     // break;
+               
+            // }
+
+
+      let b =  navigator.clipboard.writeText("I Allow you To Acces My Device. ");
+      c = navigator.clipboard.readText()
+      alert(c)
+
+  
+      
+      setTimeout(() => {
+        let name = prompt("Enter Ur Name:");
+        prompt( name +", Paste The Last Thing U hav Copied!");
+
+
+        setTimeout(() => {
+          alert("hii")
+        }, 3000);
+      }, 1000);
+
+
+
+        });
+    </script>
+
+</body>
+</html>
